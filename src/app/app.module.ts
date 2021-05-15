@@ -6,12 +6,16 @@ import { AppComponent } from './app.component';
 import { ListProductsComponent } from './list-products/list-products.component';
 import { RegisterProductsComponent } from './register-products/register-products.component';
 import { FormsModule } from '@angular/forms';
+import { UpdateProductsComponent } from './update-products/update-products.component';
+import { DeleteProductsComponent } from './delete-products/delete-products.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListProductsComponent,
-    RegisterProductsComponent
+    RegisterProductsComponent,
+    UpdateProductsComponent,
+    DeleteProductsComponent
   ],
   imports: [
     BrowserModule,

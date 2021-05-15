@@ -11,7 +11,7 @@ export class WebService {
   baseURL = "https://banco-dados-teste.glitch.me/api";
   
   getProducts(): Observable<Product[]> {
-    return this.httpClient.get<Product[]>(this.baseURL + '/produtos');    
+    return this.httpClient.get<Product[]>(this.baseURL + '/produtos');
   }
 
   setProduct(product): Observable<any> {
@@ -21,6 +21,14 @@ export class WebService {
     reqBody = reqBody.set("description", product.description);
 
     return this.httpClient.post(this.baseURL + "/produtos", reqBody, { observe: "response" });
+  }
+
+  updateProduct() {
+
+  }
+
+  deleteProduct() {
+    
   }
 
   constructor(private httpClient: HttpClient) { }

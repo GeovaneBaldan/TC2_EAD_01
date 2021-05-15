@@ -18,7 +18,11 @@ export class RegisterProductsComponent implements OnInit {
 
   registerProduct() {
     this.web.setProduct(this.product).subscribe(result => {
-      console.log(result);
+      if (result.ok == true) {
+        alert("Product successfully registered!");
+      } else {
+        alert("An error has occurred and your product has not been registered!");
+      }
     });
   }
 

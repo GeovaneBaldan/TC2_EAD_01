@@ -24,6 +24,7 @@ export class DeleteProductsComponent implements OnInit {
   constructor(private web: WebService) { }
 
   ngOnInit(): void {
+    this.removeProduct();
   }
 
 }

@@ -1,12 +1,18 @@
 <div>
-    <label>Title
+    <label>Title:
+        <br/>
         <input [(ngModel)]="product.title" placeholder="Title">
     </label>
-    <label>Price
+    <br/><br/>
+    <label>Price:
+        <br/>
         <input [(ngModel)]="product.price" placeholder="Price">
     </label>
-    <label>Description
+    <br/><br/>
+    <label>Description:
+        <br/>
         <textarea [(ngModel)]="product.description" placeholder="Description"></textarea>
     </label>
-    <button (click)="registerProduct()">Register Product</button>
+    <br/><br/>
+    <button (click)="registerProduct()">Register</button>
 </div>

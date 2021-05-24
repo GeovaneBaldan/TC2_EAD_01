@@ -1,1 +1,18 @@
-<p>update-products works!</p>
+<div>
+    <label>Title:
+        <br/>
+        <input [(ngModel)]="product.title" placeholder="Title">
+    </label>
+    <br/><br/>
+    <label>Price:
+        <br/>
+        <input [(ngModel)]="product.price" placeholder="Price">
+    </label>
+    <br/><br/>
+    <label>Description:
+        <br/>
+        <textarea [(ngModel)]="product.description" placeholder="Description"></textarea>
+    </label>
+    <br/><br/>
+    <button (click)="updateProduct()">Update</button>
+</div>

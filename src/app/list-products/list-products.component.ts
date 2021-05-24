@@ -10,6 +10,8 @@ import { WebService } from '../web.service';
 export class ListProductsComponent implements OnInit {
 
   productList: Product[];
+  upProd: Product;
+  deleteProd: Product;
 
   constructor(private web: WebService) { }
 
@@ -17,6 +19,14 @@ export class ListProductsComponent implements OnInit {
     this.web.getProducts().subscribe(result => {
       this.productList = result;
     });
+  }
+
+  updateProduct(index: number) {
+    this.upProd = this.productList[index];
+  }
+
+  removeProduct(index: number) {
+    this.deleteProd = this.productList[index];
   }
 
   ngOnInit(): void {

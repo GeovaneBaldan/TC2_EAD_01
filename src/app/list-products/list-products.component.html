@@ -1,19 +1,35 @@
 <div>
-    <table border="1">
+    <table>
         <thead>
             <tr>
-                <td><b>Price</b></td>
-                <td><b>Description</b></td>
-                <td><b>Title</b></td>
+                <td>Price</td>
+                <td>Description</td>
+                <td>Title</td>
+                <td>Edit</td>
+                <td>Remove</td>
             </tr>
         </thead>
 
         <tbody>
-            <tr *ngFor="let p of productList">
-                <td>{{p.price}}</td>
-                <td>{{p.description}}</td>
-                <td>{{p.title}}</td>
+            <tr *ngFor="let p of productList; let i = index">
+                <td>{{ p.price | currency }}</td>
+                <td>{{ p.description }}</td>
+                <td>{{ p.title }}</td>
+                <td>
+                    <button class="btnEdit" (click)="updateProduct(i)">X</button>
+                </td>
+                <td>
+                   <button class="btnRemove" (click)="removeProduct(i)">X</button> 
+                </td>
             </tr>
         </tbody>
     </table>
+</div>
+
+<div *ngIf="upProd">
+    <app-update-products [product]="upProd"></app-update-products>
+</div>
+
+<div *ngIf="deleteProd">
+    <app-delete-products [product]="deleteProd"></app-delete-products>
 </div>

@@ -17,7 +17,7 @@ export class RegisterProductsComponent implements OnInit {
   constructor(private web: WebService) { }
 
   registerProduct() {
-    this.web.setProduct(this.product).subscribe(result => {
+    this.web.registerProduct(this.product).subscribe(result => {
       if (result.ok == true) {
         alert("Product successfully registered!");
       } else {
